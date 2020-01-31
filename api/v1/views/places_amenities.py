@@ -26,19 +26,22 @@ def handle_places_amenities(place_id, amenity_id=None):
                             amenities]), 200
         amenity_ids = [amenity_obj.id for amenity_obj in place_obj.amenities]
         amenity_obj = storage.get("Amenity", amenity_id)
-        if request.method == 'DELETE':
-            if amenity_id not in amenity_ids:
-                abort(404)
-            place_obj.amenities.remove(amenity_obj)
-            storage.save()
-            return {}, 200
-        if request.method == 'POST':
-            kwargs = request.get_json(silent=True)
-            if kwargs:
-                for k, v in kwargs.items():
-                    setattr(amenity_obj, k, v)
-            place_obj.amenities.append(amenity_obj)
-            place_obj.save()
-            return jsonify(amenity_obj.to_dict()), 201
+        if amneity_obj:
+            if request.method == 'DELETE':
+                if amenity_id not in amenity_ids:
+                    abort(404)
+                place_obj.amenities.remove(amenity_obj)
+                storage.save()
+                return {}, 200
+            if request.method == 'POST':
+                kwargs = request.get_json(silent=True)
+                if kwargs:
+                    for k, v in kwargs.items():
+                        setattr(amenity_obj, k, v)
+                place_obj.amenities.append(amenity_obj)
+                place_obj.save()
+                return jsonify(amenity_obj.to_dict()), 201
+        else:
+            abort(404)
     else:
         abort(404)
