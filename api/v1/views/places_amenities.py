@@ -26,7 +26,7 @@ def handle_places_amenities(place_id, amenity_id=None):
                             amenities]), 200
         amenity_ids = [amenity_obj.id for amenity_obj in place_obj.amenities]
         amenity_obj = storage.get("Amenity", amenity_id)
-        if amneity_obj:
+        if amenity_obj:
             if request.method == 'DELETE':
                 if amenity_id not in amenity_ids:
                     abort(404)
