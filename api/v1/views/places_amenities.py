@@ -34,6 +34,8 @@ def handle_places_amenities(place_id, amenity_id=None):
                 storage.save()
                 return {}, 200
             if request.method == 'POST':
+                if amenity_id in amenity_ids:
+                    return jsonify(amenity_obj.to_dict()), 200
                 # kwargs = request.get_json(silent=True)
                 # if kwargs:
                 #     for k, v in kwargs.items():
