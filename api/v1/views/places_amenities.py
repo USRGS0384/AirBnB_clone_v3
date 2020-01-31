@@ -34,10 +34,10 @@ def handle_places_amenities(place_id, amenity_id=None):
                 storage.save()
                 return {}, 200
             if request.method == 'POST':
-                kwargs = request.get_json(silent=True)
-                if kwargs:
-                    for k, v in kwargs.items():
-                        setattr(amenity_obj, k, v)
+                # kwargs = request.get_json(silent=True)
+                # if kwargs:
+                #     for k, v in kwargs.items():
+                #         setattr(amenity_obj, k, v)
                 place_obj.amenities.append(amenity_obj)
                 place_obj.save()
                 return jsonify(amenity_obj.to_dict()), 201
