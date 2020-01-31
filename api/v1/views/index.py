@@ -14,6 +14,7 @@ def status():
 
 
 @app_views.route('/stats', strict_slashes=False)
+# This code has the advantage of not returning non-existing objects
 def stats():
     """display the number of each objects by type"""
     all_classes = {"Amenity": "amenities", "City": "cities", "Place": "places",
