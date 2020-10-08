@@ -4,7 +4,7 @@
   <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="360" height=auto />
 </p>
 
-- This repository covers Part 3, Part 4 & Part 5 of an AirBnB Clone project in Python/Flask.
+- This repository covers Part 6 of an AirBnB Clone project in Python/Flask.
 
 -  The full-stack project is divided into 7 Parts:
 
@@ -194,10 +194,10 @@ No known bugs at this time.
 
 ---
 
-## Authors (of this README.md file)
+## Authors
 
-**Pierre Beaujuge** - [PierreBeaujuge](https://github.com/PierreBeaujuge) | [LinkedIn](https://www.linkedin.com/in/pierre-beaujuge-81b75a137/) at [Holberton
+* **Pierre Beaujuge** - [PierreBeaujuge](https://github.com/PierreBeaujuge) | [LinkedIn](https://www.linkedin.com/in/pierre-beaujuge-81b75a137/) at [Holberton
 School](http://holbertonschool.com)
-**Alexa Orrico** - [Github](https://github.com/alexaorrico)
-**Jennifer Huang** - [Github](https://github.com/jhuang10123)
-**Joann Vuong**
+* **Alexa Orrico** - [Github](https://github.com/alexaorrico)
+* **Jennifer Huang** - [Github](https://github.com/jhuang10123)
+* **Joann Vuong**
