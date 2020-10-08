@@ -48,4 +48,5 @@ def state_byid(state_id):
                 state_obj.save()
             return jsonify(state_obj.to_dict()), 200
     else:
+        # When the state_id is not linked to any State object
         abort(404)

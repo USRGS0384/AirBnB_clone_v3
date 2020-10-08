@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 """
 view for Place objects that handles all default RestFul API actions
+
+Potentially add 3 optional keys for 16(Advanced):
+states: list of State ids
+cities: list of City ids
+amenities: list of Amenity ids
 """
 from flask import jsonify, abort, request
 from models import storage
